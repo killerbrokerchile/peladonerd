@@ -32,11 +32,11 @@ services:
     expose:
       - "80"
     volumes:
-      - /Users/kbs/git/peladonerd/varios/1/www:/usr/share/nginx/html:ro
+      - /Users/alejandroschwartz/space/peladonerd/peladonerd/varios/1/www:/usr/share/nginx/html:ro
     environment:
-      - VIRTUAL_HOST=pablokbs.com,www.pablokbs.com
-      - LETSENCRYPT_HOST=pablokbs.com,www.pablokbs.com
-      - LETSENCRYPT_EMAIL=pablo@pablokbs.com
+      - VIRTUAL_HOST=kioscloud.cl,www.kioscloud.cl
+      - LETSENCRYPT_HOST=kioscloud.cl,www.kioscloud.cl
+      - LETSENCRYPT_EMAIL=asandovalster@gmail.com
     depends_on:
       - nginx-proxy
       - letsencrypt

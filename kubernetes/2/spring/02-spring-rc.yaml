@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: spring 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        role: spring 
+    spec:
+      containers:
+      - name: spring 
+        image: registry.gitlab.com/alejandro.sandoval1/springboot-k8s-yaml:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+        - name: gitlab-registry  
